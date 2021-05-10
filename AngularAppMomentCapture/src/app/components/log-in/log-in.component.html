@@ -1,0 +1,27 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Sign In</mat-card-title>
+        <p> To start using app</p>
+      </mat-card-header>
+  
+      <form class="example-form" #f="ngForm">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email ID" name="email" type="email" [(ngModel)]="email" required>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" name="password" type="password" [(ngModel)]="password" required>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" [disabled]="!f.valid" (click)="onLogin()" >Sign in</button>
+      </form>
+      <div  class="not_member">
+        <h4>  Not Member <a  [routerLink]="'/signup'"> Sing Up</a></h4>
+      </div>
+      <ngx-spinner></ngx-spinner>
+    </mat-card>
+  
+  </div>

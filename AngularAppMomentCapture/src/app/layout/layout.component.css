@@ -1,0 +1,18 @@
+.example-container{
+height: 100%;
+}
+
+.imageLogo{
+    width: 64px;
+    height: 64px;
+  
+}
+img{
+    width: 44px;
+    height: 44px;
+    margin: 10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

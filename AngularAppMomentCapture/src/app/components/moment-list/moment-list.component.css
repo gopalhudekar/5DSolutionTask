@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    padding:10%
+  }
+
+  
+.docTable{
+    border-collapse: collapse;
+    width: 100%;
+}
+.docTable td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .docTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .docTable tr:hover {background-color: #ddd;}
+  
+  .docTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+.fof{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.fof h1{
+    font-size: 30px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}

@@ -1,0 +1,32 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Add new Moment</mat-card-title>
+        <!-- <p> To start using app</p> -->
+      </mat-card-header>
+  
+      <form class="example-form" #f="ngForm">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Title" name="title" type="text" [(ngModel)]="title" required>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Tag" name="tag" type="text" [(ngModel)]="tag" required>
+          </mat-form-field>
+
+          <div *ngIf="docUrl"> 
+            <img [src]='docUrl' width="100px" height="100px" >
+          </div>
+        
+            <input   type="file" id='docFile' name="choose images only" accept="image/x-png,image/gif,image/jpeg" #filePicker (change)="onFileChoose($event)">
+        
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" [disabled]="!f.valid" (click)="saveMoment()" >Save</button>
+      </form>
+     
+      <ngx-spinner></ngx-spinner>
+    </mat-card>
+  
+  </div>

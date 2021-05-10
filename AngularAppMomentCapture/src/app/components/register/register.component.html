@@ -1,0 +1,42 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+      <p> To be a member</p>
+    </mat-card-header>
+
+    <form class="example-form" #f="ngForm" >
+
+      <mat-card-content>     
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="First Name"  name="firstName" type="text"  [(ngModel)]="user.firstName" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" >
+          <input matInput placeholder="Last Name " name="lastName"  type="text" [(ngModel)]="user.lastName" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Mobile No." name="mobileNo"  type="number"  [(ngModel)]="user.mobileNo" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" name="email"  tupe="email" [(ngModel)]="user.email" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="City" name="city"  type="text"  [(ngModel)]="user.city" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">       
+          <input matInput placeholder="Password"  name="password"  type="password"  [(ngModel)]="user.password" required>
+        </mat-form-field>     
+
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent"  [disabled]="!f.valid" (click)="onRegister()" class="btn-block">Register</button>
+
+    </form>
+    <div  class="not_member">
+      <h4>Already member <a routerLink="/login"> Sing in</a></h4>
+    </div>
+    <ngx-spinner></ngx-spinner>
+  </mat-card>
+</div>
